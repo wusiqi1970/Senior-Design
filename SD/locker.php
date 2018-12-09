@@ -2,6 +2,7 @@
     <head>
         <title>Locker</title>
         <link  href="locker.css" rel="stylesheet" type="text/css" >
+        <link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
     </head>
     <style>
@@ -72,6 +73,29 @@ $conn->close();
 
 </table>
             </div>
+            <div class = "row">
+			<div class = "col-md-6">
+				<h2>
+					Add item here
+				</h2>
+				<form action = "addition.php" method = "post">
+					<div class = "form-group">
+					<label>Tool_ID</label>
+					<input type = "text" name = "tool_id" class = "form-control" required>
+
+
+					</div>
+					<div class = "form-group">
+					<label>Tool_Name</label>
+					<input type = "text" name = "tool_name" class = "form-control" required>
+
+
+					</div>
+					<button type = "submit" class = "btn btn-primary"> add </button>
+				</form>
+			</div>
+		</div>
+
 
         </header>
         <body>
