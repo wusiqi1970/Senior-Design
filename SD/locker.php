@@ -1,15 +1,24 @@
-<?php
-
-
-?>
-
-
 <html>
     <head>
         <title>Locker</title>
         <link  href="locker.css" rel="stylesheet" type="text/css" >
 
     </head>
+    <style>
+  table {
+   border-collapse: collapse;
+   width: 100%;
+   color: #588c7e;
+   font-family: monospace;
+   font-size: 25px;
+   text-align: left;
+     } 
+  th {
+   background-color: #588c7e;
+   color: white;
+    }
+  tr:nth-child(even) {background-color: #f2f2f2}
+ </style>
 
     <body>
         <header>
@@ -32,10 +41,41 @@
                 <div class="button">
                     <a href="" class="btn btn-one">Unlock!</a>
                 </div> 
+                 <table>
+ <tr>
+  <th>Tool_ID</th> 
+  <th>Tool_Name</th> 
+ </tr>
+  
+
+
+
+
+<?php
+$conn = mysqli_connect('localhost','root','');
+mysqli_select_db($conn,'epic');
+$sql = "select Tool_Num, Tool_Name FROM tools ";
+$result = $conn->query($sql);
+if($result->num_rows >0)
+{
+	while ($row = $result->fetch_assoc()){
+		 echo "<tr><td>" . $row["Tool_Num"]. "</td><td>" . $row["Tool_Name"] . "</td><td>";
+
+	}
+}
+
+$conn->close();
+
+
+
+?>
+
+</table>
             </div>
 
         </header>
-    </body>
+        <body>
 
-
+</body>
 </html>
+
