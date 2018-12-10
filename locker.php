@@ -1,18 +1,4 @@
-<?php
-$conn = mysqli_connect('localhost','root','');
-mysqli_select_db($conn,'epic');
-$sql = "select Tool_Num, Tool_Name FROM tools ";
-$result = $conn->query($sql);
-if($result->num_rows >0)
-{
-	while ($row = $result->fetch_assoc()){
-		 echo "<tr><td>" . $row["Tool_Num"]. "</td><td>" . $row["Tool_Name"] . "</td><td>";
 
-	}
-}
-
-$conn->close();
-?>
 
 <html>
     <head>
@@ -50,7 +36,10 @@ $conn->close();
 					    <label>Tool_Name</label>
 					    <input type = "text" name = "tool_name" class = "form-control" required>
 					</div>
-                    
+                    <div class = "form-group">
+					    <label>Locker_ID</label>
+					    <input type = "text" name = "locker_id" class = "form-control" required>
+					</div>
                     <button type = "submit" class = "btn btn-primary"> add </button>
 				</form>
 			</div>
@@ -60,7 +49,23 @@ $conn->close();
             <tr>
             <th>Tool_ID</th> 
             <th>Tool_Name</th> 
+            <th>Locker_ID</th>
             </tr>
+            <?php
+$conn = mysqli_connect('localhost','root','');
+mysqli_select_db($conn,'epic');
+$sql = "select Tool_Num, Tool_Name,Locker_Num FROM tools ";
+$result = $conn->query($sql);
+if($result->num_rows >0)
+{
+	while ($row = $result->fetch_assoc()){
+		 echo "<tr><td>" . $row["Tool_Num"]. "</td><td>" . $row["Tool_Name"] . "</td><td>" .$row["Locker_Num"]."</td></tr>";
+
+	}
+}
+
+$conn->close();
+?>
 
         </table>
         <style>
