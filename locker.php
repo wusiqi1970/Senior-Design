@@ -44,7 +44,7 @@
 				</form>
 			</div>
         </div>
-        <div class = "row2">
+        <div class = "row3">
             <div class = "text">
                 Rent item here!
             </div>
@@ -59,6 +59,22 @@
                 </form>
             </div>
         </div>
+        <div class = "row4">
+            <div class = "text">
+                Return item here!
+            </div>
+            <div class = "col-md-6">
+                <form action = "return.php" method = "post">
+                   
+                    <div class = "form-group">
+                        <label>Tool_Name</label>
+                        <input type = "text" name = "tool_name" class = "form-control" required>
+                    </div>
+                            <button type = "submit" class = "btn btn-primary"> Return </button>
+                </form>
+            </div>
+        </div>
+
 
         <table>
             <tr>
