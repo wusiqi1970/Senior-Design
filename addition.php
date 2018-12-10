@@ -19,7 +19,7 @@ if($num == 1)
 
 else
 {
-	$reg = "insert into tools(Tool_Num,Tool_Name,Locker_Num) values ('$name','$pass','$ID')";
+	$reg = "insert into tools(Tool_Num,Tool_Name,Locker_Num,Status) values ('$name','$pass','$ID','Available')";
 	mysqli_query($con, $reg);
 	//echo "Successfully added items";
 	header('location:locker.php');
