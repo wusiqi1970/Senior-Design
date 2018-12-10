@@ -35,7 +35,7 @@
                     <li><a href="explore.php">EXPLORE</a> </li>
                 </ul>
             </div>
-        </header>
+        
 
             <div class="epic">
                 <h1></h1>
@@ -74,11 +74,12 @@ $conn->close();
 
 </table>
             </div>
+            </header>
             <div class = "row">
 			<div class = "col-md-6">
-				<h2>
+				
 					Add item here
-				</h2>
+				
 				<form action = "addition.php" method = "post">
 					<div class = "form-group">
 					<label>Tool_ID</label>
