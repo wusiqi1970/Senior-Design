@@ -21,7 +21,7 @@ else
 	$reg = "insert into tools(Tool_Num,Tool_Name) values ('$name','$pass')";
 	mysqli_query($con, $reg);
 	//echo "Successfully added items";
-	header('location:loker.php');
+	header('location:locker.php');
 
 }
 
